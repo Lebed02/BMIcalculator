@@ -43,19 +43,12 @@ public class Application {
                     System.out.println("Enter your height again\n");
                 }
             }
-            double heightInMeters = height / 100;
-            double BMIresult = weight / Math.pow(heightInMeters, 2);
-            if (BMIresult < 18.5) {
-                System.out.println("\n----------------\n"+"Your BMI is:" + (int) BMIresult + "\nIt is underweight\n"+"----------------\n");
-            } else if (BMIresult >= 18.5 && BMIresult <= 25) {
-                System.out.println("\n----------------\n"+"Your BMI is:" + (int) BMIresult + "\nIt is normal weight\n"+"----------------\n");
-            } else if (BMIresult >= 25 && BMIresult <= 30) {
-                System.out.println("\n----------------\n"+"Your BMI is:" + (int) BMIresult + "\nIt is overweight\n"+"----------------\n");
-            } else if (BMIresult >= 30 && BMIresult <= 40) {
-                System.out.println("\n----------------\n"+"Your BMI is:" + (int) BMIresult + "\nIt is obesity\n"+"----------------\n");
-            } else if (BMIresult >= 40) {
-                System.out.println("\n----------------\n"+"Your BMI is:" + (int) BMIresult + "\n It is morbid obesity\n"+"----------------\n");
-            }
+
+
+            Calculator calculator1 = new Calculator(weight,height);
+            calculator1.showResult();
+
+
             System.out.println("Do you want to calculate again?\n");
             boolean answerIsValid;
             System.out.println("Press [Y] to continue");
